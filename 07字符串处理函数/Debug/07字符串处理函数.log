@@ -1,0 +1,22 @@
+﻿  字符串处理函数.c
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(165): warning C4477: “sscanf”: 格式字符串“%11d”需要类型“int *”的参数，但可变参数 1 拥有了类型“__int64 *”
+  g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(165): note: 请考虑在格式字符串中使用“%lld”
+  g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(165): note: 请考虑在格式字符串中使用“%I64d”
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(167): warning C4778: “printf”: 格式字符串“%\n”未终止
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(167): warning C4474: printf: 格式字符串中传递的参数太多
+  g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(167): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(168): warning C4778: “printf”: 格式字符串“%\n”未终止
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(168): warning C4474: printf: 格式字符串中传递的参数太多
+  g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(168): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(169): warning C4778: “printf”: 格式字符串“%\n”未终止
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(169): warning C4474: printf: 格式字符串中传递的参数太多
+  g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(169): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(170): warning C4778: “printf”: 格式字符串“%\n”未终止
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(170): warning C4474: printf: 格式字符串中传递的参数太多
+  g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(170): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(171): warning C4778: “printf”: 格式字符串“%\n”未终止
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(171): warning C4474: printf: 格式字符串中传递的参数太多
+  g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(171): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(206): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+g:\c_train\code\day02\07字符串处理函数\字符串处理函数.c(207): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+  07字符串处理函数.vcxproj -> G:\c_train\code\day02\Debug\07字符串处理函数.exe
