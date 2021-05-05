@@ -3,25 +3,25 @@
 #include<string.h>
 #include<stdlib.h>
 
-//1.s	strcpy ×Ö·û´®¿½±´º¯Êı
+//1.s	strcpy å­—ç¬¦ä¸²æ‹·è´å‡½æ•°
 void test01() {
 
 	char buf[32] = { 0 };
 
-	//¸ø×Ö·ûÊı×é½øĞĞ¸³Öµ£¬
-	//buf = "hello, world!";//´íÎóĞ´·¨£¬¾ÍÏëÌáÒ»×ì£¬javaÖĞÊÇ¿ÉÒÔµÄ String buff £» buff= ¡°hellowm world¡±£»
+	//ç»™å­—ç¬¦æ•°ç»„è¿›è¡Œèµ‹å€¼ï¼Œ
+	//buf = "hello, world!";//é”™è¯¯å†™æ³•ï¼Œå°±æƒ³æä¸€å˜´ï¼Œjavaä¸­æ˜¯å¯ä»¥çš„ String buff ï¼› buff= â€œhellowm worldâ€ï¼›
 	strcpy(buf, "hello, world!\n");
 	printf("buf = %s", buf);
 
-	strcpy(buf, "hello\0world!\n");//¿½±´ÊÇÓöµ½\0»áÌáÇ°½áÊø,×Ö·û´®´¦Àíº¯Êı¶¼ÓĞÕâ¸öÌØĞÔ
+	strcpy(buf, "hello\0world!\n");//æ‹·è´æ˜¯é‡åˆ°\0ä¼šæå‰ç»“æŸ,å­—ç¬¦ä¸²å¤„ç†å‡½æ•°éƒ½æœ‰è¿™ä¸ªç‰¹æ€§
 	printf("buf = %s", buf);
 
 	char buf2[10] = { 0 };
-	//strcpy(buf2, "hello, you,world!\n");//Ô­×Ö·û´®³¤¶È±È	Ä¿±ê×Ö·û´®³¤£¬³ÌĞò±ÀÀ£¡£
+	//strcpy(buf2, "hello, you,world!\n");//åŸå­—ç¬¦ä¸²é•¿åº¦æ¯”	ç›®æ ‡å­—ç¬¦ä¸²é•¿ï¼Œç¨‹åºå´©æºƒã€‚
 	printf("buf = %s", buf2);
 }
 
-//2.s	strncpy ×Ö·û´®¿½±´º¯Êı
+//2.s	strncpy å­—ç¬¦ä¸²æ‹·è´å‡½æ•°
 void test02() {
 
 	char buf[32] = { 0 };
@@ -29,11 +29,11 @@ void test02() {
 	printf("buf = :%s\n", buf);
 
 	char buf2[32] = { 0 };
-	strncpy(buf2, "hell\0,world!", 8);//Óöµ½\0ÌáÇ°½áÊø
+	strncpy(buf2, "hell\0,world!", 8);//é‡åˆ°\0æå‰ç»“æŸ
 	printf("buf2 = :%s\n", buf2);
 }
 
-//03 strcat();×Ö·û´®Æ´½Óº¯Êı
+//03 strcat();å­—ç¬¦ä¸²æ‹¼æ¥å‡½æ•°
 void test03() {
 
 	char buff1[32] = "hello";
@@ -45,7 +45,7 @@ void test03() {
 	printf("buff2:%s\n", buff2);
 }
 
-//04 strncat();×Ö·û´®Æ´½Óº¯Êı
+//04 strncat();å­—ç¬¦ä¸²æ‹¼æ¥å‡½æ•°
 void test04() {
 
 	char buff1[32] = "hello";
@@ -57,17 +57,17 @@ void test04() {
 	printf("buff2:%s\n", buff2);
 }
 
-//05strcmp();×Ö·û´®±È½Ïº¯Êı
+//05strcmp();å­—ç¬¦ä¸²æ¯”è¾ƒå‡½æ•°
 void test05() {
 	char buf1[] = "hello, world";
 	printf("buf1 = %s", buf1);
 
-	printf("ÇëÊäÈëÒ»¸ö×Ö·û´®£º");
+	printf("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ï¼š");
 
 	char buf2[32] = { 0 };
 	fgets(buf2, sizeof(buf2), stdin);
 
-	//buf2ºó»áÓĞ\n , ¸ÄÎª£¬\0,
+	//buf2åä¼šæœ‰\n , æ”¹ä¸ºï¼Œ\0,
 	buf2[strlen(buf2) - 1] = '\0';
 
 	if (strcmp(buf1, buf2) == 0)
@@ -84,17 +84,17 @@ void test05() {
 	}
 }
 
-//06strncmp();×Ö·û´®±È½Ïº¯Êı
+//06strncmp();å­—ç¬¦ä¸²æ¯”è¾ƒå‡½æ•°
 void test06() {
 	char buf1[] = "hello,world";
 	printf("buf1 = %s", buf1);
 
-	printf("ÇëÊäÈëÒ»¸ö×Ö·û´®£º");
+	printf("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ï¼š");
 
 	char buf2[32] = { 0 };
 	fgets(buf2, sizeof(buf2), stdin);
 
-	//buf2ºó»áÓĞ\n , ¸ÄÎª£¬\0,
+	//buf2åä¼šæœ‰\n , æ”¹ä¸ºï¼Œ\0,
 	buf2[strlen(buf2) - 1] = '\0';
 
 	if (strncmp(buf1, buf2,5) == 0)
@@ -111,10 +111,10 @@ void test06() {
 	}
 }
 
-//06±È½ÏĞ¡°¸Àı
+//06æ¯”è¾ƒå°æ¡ˆä¾‹
 void test07() {
 
-	printf("ÇëÊäÈëÒ»¸ö¼¾½Ú£ºspring, summer ,autumn,winter\n");
+	printf("è¯·è¾“å…¥ä¸€ä¸ªå­£èŠ‚ï¼šspring, summer ,autumn,winter\n");
 
 	char buf[32] = {0};
 	fgets(buf,sizeof(buf),stdin);
@@ -122,21 +122,21 @@ void test07() {
 
 	if (strncmp(buf,"spring",6)==0)
 	{
-		printf("´ºÌì");
+		printf("æ˜¥å¤©");
 	}else if (strncmp(buf,"summer", 6)==0)
 	{
-		printf("ÏÄÌì");
+		printf("å¤å¤©");
 	}
 	else if (strncmp(buf,"autumn", 6)==0)
 	{
-		printf("ÇïÌì");
+		printf("ç§‹å¤©");
 	}
 	else if (strncmp(buf,"winter", 6)==0)
 	{
-		printf("¶¬Ìì");
+		printf("å†¬å¤©");
 	}
 }
-//sprinf ¸ñÊ½»¯×Ö·û´®
+//sprinf æ ¼å¼åŒ–å­—ç¬¦ä¸²
 void test08() {
 
 	int year = 2021;
@@ -144,15 +144,15 @@ void test08() {
 	int day = 04;
 
 	char buf[32] = { 0 };
-	sprintf(buf,"%dÄê%dÔÂ%dÈÕ",year,month,day);
+	sprintf(buf,"%då¹´%dæœˆ%dæ—¥",year,month,day);
 	
 	printf("buf = %s\n", buf);
 }
 
-// sscanf ×Ö·û´®²ğ·Ö
+// sscanf å­—ç¬¦ä¸²æ‹†åˆ†
 void  test09() {
 
-	char msg[128] = "phone:136000000000;2021/05/04;¸Ã»¹Ç®ÁË";
+	char msg[128] = "phone:136000000000;2021/05/04;è¯¥è¿˜é’±äº†";
 
 	long long phoneNumber = 0;
 	int year = 0;
@@ -160,7 +160,7 @@ void  test09() {
 	int day = 0;
 	char text[64] = { 0 };
 	
-	//sscanf(msg,"phone:%11d;%d/%d/%d;%s",&phoneNumber,&year,&month,&day,text);//text,Êı×éÃû±¾Éí¾ÍÏàµ±ÓÚÊÇµØÖ·
+	//sscanf(msg,"phone:%11d;%d/%d/%d;%s",&phoneNumber,&year,&month,&day,text);//text,æ•°ç»„åæœ¬èº«å°±ç›¸å½“äºæ˜¯åœ°å€
 
 	sscanf(msg,"phone:%11d;%d/%d/%d;%s",&phoneNumber,&year,&month,&day,text);
 
@@ -172,23 +172,23 @@ void  test09() {
 
 }
 
-//strchr ×Ö·û²éÕÒ 
+//strchr å­—ç¬¦æŸ¥æ‰¾ 
 void test10() {
 
 	char buf[32] = "luyuan@sina.con";
 	char * ret = strchr(buf,'@');
 	if (ret ==NULL)
 	{
-		printf("Î´ÕÒµ½·ûºÅ@\n");
+		printf("æœªæ‰¾åˆ°ç¬¦å·@\n");
 	}
 	else
 	{
-		printf("ÕÒµ½@·ûºÅ£¬Î»ÖÃÔÚ:%d",ret -buf);
+		printf("æ‰¾åˆ°@ç¬¦å·ï¼Œä½ç½®åœ¨:%d",ret -buf);
 	}
 
 }
 
-//strstr ×Ö·û´®²éÕÒ
+//strstr å­—ç¬¦ä¸²æŸ¥æ‰¾
 void test11() {
 
 	char * str = "abcdefg";
@@ -196,18 +196,153 @@ void test11() {
 
 	if (ret =NULL)
 	{
-		printf("Î´ÕÒµ½×Ö·û´®de\n");
+		printf("æœªæ‰¾åˆ°å­—ç¬¦ä¸²de\n");
 	}
 	else
 	{
-		printf("ÕÒµ½×Ó´®£¬Î»ÖÃÔÚ:%d\n", ret - str);
+		printf("æ‰¾åˆ°å­ä¸²ï¼Œä½ç½®åœ¨:%d\n", ret - str);
 	}
 
 	printf("ret:%d\n", ret);
-	printf("str:%d\n",str );
-	
+	printf("str:%d\n",str );	
 
 }
+
+
+//å±è”½ç¦è¯­æ¡ˆä¾‹
+void test12() {
+
+	char buf[1024] = { 0 };
+	fgets(buf, sizeof(buf),stdin);
+	//å°†bufä¸­\næ”¹ä¸º\0,
+	buf[strlen(buf) - 1] = '\0';
+
+	char * p = buf;//åˆ›å»ºä¸´æ—¶æŒ‡é’ˆéå†å­—ç¬¦ä¸²ä¿¡æ¯ã€‚
+
+	//while æŸ¥æ‰¾å­—ç¬¦ä¸²ä¸­å‡ºç°ç›®æ ‡å­—ç¬¦çš„ä½ç½®
+	//while (1)
+	//{
+	//	//ä¸Šå•, ä½ çœŸsbï¼Œsbï¼Œsb
+	//	char * ret = strstr(p,"sb");
+	//	if (ret !=NULL)
+	//	{
+	//		//æ‰¾åˆ°ç¦è¯­,æ›¿æ¢
+	//		strncpy(ret,"**",2);
+	//		p = ret + 2;
+	//	}
+	//	else
+	//	{
+	//		break;
+	//	}
+	//}
+	//printf("%s:\n",buf);
+
+	//ä¼˜åŒ–ä»£ç ã€‚
+	char * ret =NULL;
+	while (ret = strstr(p, "sb"))
+	{
+		strncpy(ret,"**",2);
+		p = ret + 2;
+
+	}
+	printf("%s:\n", buf);
+
+}
+
+
+//å­—ç¬¦ä¸²åˆ†å‰²ï¼Œstrtok
+void test13() {
+
+	char buf[1024] = "å¼ ä¸‰:æå››:ç‹äº”:å‘µå‘µ:å“ˆå“ˆå“ˆ";
+	char *names[64] = { 0 };
+
+	//char * name1 =strtok(buf,":");
+	//printf("%s:\n", name1);
+	//name1 = strtok(NULL,":");//ä»ç¬¬äºŒæ¬¡åˆ†å‰²ï¼Œå‚æ•°1å¼€å§‹å¡«ä¸º NULL ;
+	//rintf("%s:\n", name1);
+
+
+	//ç¬¬ä¸€ä¸ªåˆ†å‰²
+	int i = 0;	
+	names[i] = strtok(buf, ":");
+
+	//ä»ç¬¬äºŒæ¬¡åˆ†å‰²ï¼Œå‚æ•°1å¼€å§‹å¡«ä¸º NULL ;
+	while (names[i] != NULL)
+	{
+		i++;
+		names[i] =strtok(NULL,":");
+	}
+
+	//éå†namesæ•°ç»„
+	int j = 0;
+	while (names[j]!=0)
+	{
+		printf("%s:\n", names[j++]);
+	}
+}
+
+//13åˆ†å‰² ä»£ç ä¼˜åŒ–ï¼š
+void test14() {
+
+
+	char buf[1024] = "å¼ ä¸‰:æå››:ç‹äº”:å‘µå‘µ:å“ˆå“ˆå“ˆ";
+	char *names[64] = { 0 };
+
+	int i = 0;
+	while ((names[i++] = strtok(names[i],":"))!=NULL){}
+
+	//éå†namesæ•°ç»„
+	int j = 0;
+	while (names[j] != 0)
+	{
+		printf("%s:\n", names[j++]);
+	}
+}
+
+//voidæ‰©å±•
+void test15(){
+
+
+	char buf[1024] = "å¼ ä¸‰###skjj8**11!!!!!:hahahha,hahaha*****aaaaaå“ˆå“ˆå“ˆ";
+	char *worlds[64] = {buf,NULL};
+
+	int i = 0;
+	while (      (worlds[i++] = strtok(worlds[i],"?:#*!"))!= NULL     ){}
+
+	//éå†wowldsæ•°ç»„
+	int j = 0;
+	while (worlds[j] != 0)
+	{
+		printf("%s:\n", worlds[j++]);
+	}
+}
+
+//atoi(); å­—ç¬¦è½¬æ¢ï¼Œæ•°å­—ã€‚ç±»ä¼¼çš„atol();atol();
+
+void test16() {
+
+	int num = 0;
+	char buf[] = "123";
+
+	num = atoi(buf);
+
+	printf("%d:\n",num);
+
+	//sscanfä¹Ÿå¯ä»¥ååˆ°å­—ç¬¦è½¬æ•°å­—//å¦‚æœç¬¬ä¸€ä¸ªï¼Œè¿‡æ»¤å¤±è´¥ï¼Œç»“æŸåŒ¹é…ï¼Œ
+	sscanf("1232aaa", "%*[a-z]%d", &num);
+	printf("%d:\n", num);
+
+	int a = 0;
+	int b = 0;
+	
+	sscanf("1234 45678","%d %d",&a,&b);
+		
+	printf("a = %d\n",a);
+	printf("b = %d\n",b);
+}
+
+
+
 
 int main() {
 
@@ -216,3 +351,5 @@ int main() {
 	system("pause");
 	return EXIT_SUCCESS;
 } 
+
+
